@@ -1,0 +1,23 @@
+<p>
+  home works!
+  <span (click)=listallproducts()>Click</span>
+
+
+  <div *ngIf="list">
+
+    <div *ngFor="let product of list">
+      <div style="background-color: red;">
+        <p>{{product.name}}</p>
+        <p>{{product.quantity}}</p>
+        <p>{{product.expiryDate}}</p>
+        <p>{{product.vendor.address}}</p>
+        <p (click)="loadComments(product.id)">Load Comments</p>
+      </div>
+      <br />
+
+    </div>
+
+
+
+
+  </div>

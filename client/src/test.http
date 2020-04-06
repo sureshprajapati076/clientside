@@ -1,0 +1,96 @@
+POST http://localhost:8055/signup
+Content-Type: application/json
+
+{
+    "email":"ppp@gmail.com",
+    "password":"password",
+    "name":"Praja Prajapati",
+    "address":"Fairfield, Iowa",
+    "roles":["USER","ADMIN"]
+}
+
+
+###
+POST http://localhost:8055/signin
+Content-Type: application/json
+
+{
+    "username":"suresh@gmail.com",
+    "password":"password"
+}
+
+###
+GET http://localhost:8055/products/getvendors
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXJlc2hAZ21haWwuY29tIiwiZXhwIjoxNTg1ODExNzEzLCJpYXQiOjE1ODU3OTM3MTN9.Cq0xNhm5U78U-D9D0QB3-gwG7yTVC490kISKhH1osUwyHB9cC_cn67Zp15amG0y8fDIIdwwIeeGhX2CuJCtjcg
+
+###
+
+GET http://localhost:8055/products/vendorbyid/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXJlc2hAZ21haWwuY29tIiwiZXhwIjoxNTg1ODExNzEzLCJpYXQiOjE1ODU3OTM3MTN9.Cq0xNhm5U78U-D9D0QB3-gwG7yTVC490kISKhH1osUwyHB9cC_cn67Zp15amG0y8fDIIdwwIeeGhX2CuJCtjcg
+
+###
+POST http://localhost:8055/products/addvendor
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXJlc2hAZ21haWwuY29tIiwiZXhwIjoxNTg1ODExNzEzLCJpYXQiOjE1ODU3OTM3MTN9.Cq0xNhm5U78U-D9D0QB3-gwG7yTVC490kISKhH1osUwyHB9cC_cn67Zp15amG0y8fDIIdwwIeeGhX2CuJCtjcg
+
+{
+    "address":"KTM BHKA",
+    "phone":"6642967890"
+}
+
+
+
+###
+GET http://localhost:8055/products/getproducts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXJlc2hAZ21haWwuY29tIiwiZXhwIjoxNTg1ODExNzEzLCJpYXQiOjE1ODU3OTM3MTN9.Cq0xNhm5U78U-D9D0QB3-gwG7yTVC490kISKhH1osUwyHB9cC_cn67Zp15amG0y8fDIIdwwIeeGhX2CuJCtjcg
+
+###
+POST http://localhost:8055/products/addproduct
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXJlc2hAZ21haWwuY29tIiwiZXhwIjoxNTg1ODExNzEzLCJpYXQiOjE1ODU3OTM3MTN9.Cq0xNhm5U78U-D9D0QB3-gwG7yTVC490kISKhH1osUwyHB9cC_cn67Zp15amG0y8fDIIdwwIeeGhX2CuJCtjcg
+
+{
+    "name":"sofa23",
+    "description":"good sofa ",
+    "expiryDate":"2020-08-12",
+    "quantity":200,
+    "vendor":{"id":1}
+}
+
+
+###
+POST http://localhost:8055/comments/add
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXJlc2hAZ21haWwuY29tIiwiZXhwIjoxNTg1ODA5NjM5LCJpYXQiOjE1ODU3OTE2Mzl9.qeKg14aae4AG9kCvoVZuo5tlRwGAeApIXGzJm9dWnXwfJuyP_P8m7TsRj56iEIUoBLqThEoj91G9uhwLZZKp6Q
+
+{
+  "productId":"2",
+  "emailId":"suresh@gmail.com",
+  "comment":"some comments beautifyll written",
+  "stars":"55"
+}
+
+
+###
+POST http://localhost:8055/comments/reply/2032
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdW1hbkBnbWFpbC5jb20iLCJleHAiOjE1ODU4MTEzMTAsImlhdCI6MTU4NTc5MzMxMH0.Sm0SQ5ogMMlGXNF1wkFJI0x7ZCv-7FIuXYEozF39MXT47z5YYJanT-W7WeK7mY7-gYSzoqGmTmv9LjmWgQvoeQ
+
+{
+    "comment":"realbbbbbly wonderful",
+    "email":"new@gmail.com"
+}
+
+###
+GET http://localhost:8055/comments/find/2
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8055/comments/getall
+Content-Type: application/json
+
